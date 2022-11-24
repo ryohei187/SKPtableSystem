@@ -1,0 +1,241 @@
+
+main{
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+.zone-wrapper{
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.col-1 {
+  width: 100%;
+  max-width: 230px;
+}
+.tableoutput{
+  width: 95%;
+  height: 660px;
+  overflow: auto;
+  padding: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px dotted black;
+  margin-right: 20px;
+}
+.createNewTables{
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+}
+
+.createNewTables p{
+  width: 100%;
+  text-align: left;
+  margin-bottom: 10px;
+  font-size: 21px;
+}
+
+form {
+  font-size: 21px;
+}
+
+label{
+  font-weight: bold;
+}
+
+.createNewTables form input{
+  width: 100%;
+  margin-top: 10px;
+  box-sizing: border-box;
+  font-size: 21px;
+  padding: 10px;
+}
+
+.occupyBtn button{
+  cursor: pointer;
+}
+.col-2{
+  margin-left: 20px;
+  width: 80%;
+  max-width: 1262px;
+  display: flex;
+  flex-direction: column;
+}
+.zone3{
+  width: 100%;
+  max-width: 1262px;
+  height: 675px;
+  display: flex;
+  border: 4px solid black;
+  justify-content: space-between;
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+
+.container {
+  min-width: 1258px;
+  height: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  border: 1px solid #aaaaaa;
+}
+
+.container div {
+  height: 70px;
+  width: 100px;
+  border: 1px dotted grey;
+  font-weight: bold;
+  display: block;
+}
+
+.container .table{
+  cursor: default;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.occupyBtn{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 20px;
+  margin-top: 10px;
+}
+
+.table{
+  height: 70px;
+  width: 100px;
+  border: 2px solid black;
+  font-weight: bold;
+}
+
+.notSeated-wrapper{
+  margin: 50px auto;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+}
+.notSeated-wrapper p, .notSeated-wrapper a, #studentsNameList{
+  width: 100%;
+  text-align: center;
+}
+.notSeated-wrapper p .empathize{
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.notSeated-wrapper p span{
+  font-weight: bold;
+}
+
+.notSeated-wrapper a{
+  width: 110px;
+  display: flex;
+  margin: 0 auto;
+  text-align: center;
+  color: blue;
+  text-decoration: underline;
+  font-weight: bold;
+  padding: 10px;
+}
+
+#studentsNameList{
+  display: none;
+  width: 50%;
+  margin: 0 auto;
+  border: 1px solid gray;
+  height: 180px;
+  overflow: auto;
+  box-sizing: border-box;
+}
+
+#studentsNameList p{
+  padding: 10px;
+  width: 100%;
+  border-bottom: 1px solid gray;
+  box-sizing: border-box;
+}
+#studentsNameList p:nth-child(odd){
+  background-color: lightgray;
+}
+
+#studentsNameList p:last-of-type{
+  border: none
+}
+
+.tooltip {
+  position: absolute;
+  display: inline-block;
+}
+
+.tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 150%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent black transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+
+.tooltipMenu {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltipMenu .tooltiptext {
+  font-size: 14px;
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.tooltipMenu .tooltiptext::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent black transparent;
+}
+
+.tooltipMenu:hover .tooltiptext {
+  visibility: visible;
+}

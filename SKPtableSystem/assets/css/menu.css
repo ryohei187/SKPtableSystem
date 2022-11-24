@@ -1,0 +1,99 @@
+.welcomeMsg{
+  width: 90%;
+  margin: 0 auto;
+}
+
+.welcomeMsg p{
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.nav{
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: end;
+  height: 300px;
+}
+
+.nav a{
+  background-color: blueviolet;
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+  padding: 50px;
+  height: 100px;
+  text-decoration: none;
+  border-radius: 50%;
+}
+.nav a p{
+  padding-bottom: 15px;
+  text-align: center;
+}
+
+.nav a .flexNumbers{
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.free{
+  color: 	black;
+}
+.occupied{
+  color: red;
+}
+
+.button-wrappers{
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.col-1 .reset-buttons{
+  padding-top: 10px;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 25px;
+}
+.resetAllBtn{
+  margin: 0px auto;
+  background-color: red;
+  color: white;
+  padding: 5px;
+  width: 90%;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.undoBtn{
+  margin: 0px auto;
+  background-color: blue;
+  color: white;
+  padding: 5px;
+  width: 90%;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 25px;
+  margin-bottom: 8px;
+}
+
+.col-2 .backBtn{
+  background-color: blueviolet;
+  color: white;
+  margin: 20px auto;
+  padding: 10px;
+  width: 400px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 25px;
+}
