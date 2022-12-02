@@ -52,6 +52,8 @@ async function occupyTable(tableID){
   let student = await Student.getOneStudent(userID);
   let table = await Table.getTables(classroom);
 
+  console.log(student)
+
   if(student.isSeated == 1){
     const oldTableId = table.filter(t => {
       //console.log(t)

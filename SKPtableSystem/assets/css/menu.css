@@ -1,10 +1,10 @@
 .welcomeMsg{
   width: 90%;
-  margin: 0 auto;
+  margin: 50px auto;
 }
 
 .welcomeMsg p{
-  font-size: 20px;
+  font-size: 25px;
   margin-bottom: 10px;
 }
 
@@ -17,17 +17,19 @@
 }
 
 .nav a{
+  width: 200px;
   background-color: blueviolet;
   color: white;
-  font-size: 25px;
   font-weight: bold;
   padding: 50px;
-  height: 100px;
+  height: 180px;
   text-decoration: none;
   border-radius: 50%;
 }
 .nav a p{
+  padding-top: 15px;
   padding-bottom: 15px;
+  font-size: 30px;
   text-align: center;
 }
 

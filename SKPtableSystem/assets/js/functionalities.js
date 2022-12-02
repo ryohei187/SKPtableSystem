@@ -2,7 +2,7 @@ const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const page = urlParams.get('page');
 
-const userID = 4;
+const userID = 1;
 
 let classroom = 'MU7-' + page;
 let gridFields = [];

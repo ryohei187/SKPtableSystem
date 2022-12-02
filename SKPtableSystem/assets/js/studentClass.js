@@ -1,3 +1,5 @@
+const studentHTML = "http://172.16.3.117:5000";
+
 let students2 = [];
 class Student {
   id;
@@ -18,7 +20,7 @@ class Student {
 
   static async getAllStudents () {
     this.studentData;
-    await fetch(`http://192.168.184.1:5000/api/Student`)
+    await fetch(`${studentHTML}/api/Student`)
     .then((res) => { return res.json() })
     .then((students) => {
       this.studentData = students;   
@@ -29,7 +31,7 @@ class Student {
 
   static async getOneStudent (id) {
     let student;
-    await fetch(`http://192.168.184.1:5000/api/Student/${id}`)
+    await fetch(`${studentHTML}/api/Student/${id}`)
     .then((res) => { return res.json() })
     .then((s) => {
       student = s;   
@@ -65,7 +67,7 @@ class Student {
     let id = "t" + i;
     let idBtn = "t" + i + "-btn";
   
-    await fetch(`http://192.168.184.1:5000/api/Student/${studentId}`)
+    await fetch(`${studentHTML}/api/Student/${studentId}`)
     .then((res) => { return res.json() })
     .then((student) => {
       let firstname = student[0].firstname;
@@ -93,7 +95,7 @@ class Student {
       studentID: studentID
     };
     console.log(updateTableBody)
-    fetch(`http://192.168.184.1:5000/api/StudentTable/${id}`, {
+    fetch(`${studentHTML}/api/StudentTable/${id}`, {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(updateTableBody)
@@ -115,7 +117,7 @@ class Student {
       isSeated: action
     };
 
-    await fetch(`http://192.168.184.1:5000/api/Student/${id}`, {
+    await fetch(`${studentHTML}/api/Student/${id}`, {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(seatedBody)
@@ -129,7 +131,7 @@ class Student {
   
   static async resetSeatedStudents(classroom) {
     let seatedStudentID = [];
-    await fetch(`http://192.168.184.1:5000/api/Table/${classroom}`)
+    await fetch(`${studentHTML}/api/Table/${classroom}`)
     .then((res) => { return res.json() })
     .then((tables) => {
       tables.forEach(t => {
@@ -145,7 +147,7 @@ class Student {
         isSeated: 0
       };
 
-      fetch(`http://192.168.184.1:5000/api/Student/${sID}`, {
+      fetch(`${studentHTML}/api/Student/${sID}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(seatedBody)
@@ -159,7 +161,7 @@ class Student {
 
   static async searchStudent(id) {
     let studentData;
-    fetch(`http://192.168.184.1:5000/api/Search/${id}`)
+    fetch(`${studentHTML}/api/Search/${id}`)
     .then((res) => { return res.json() })
     .then((data) => {
       studentData = data;

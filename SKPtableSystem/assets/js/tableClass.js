@@ -1,3 +1,5 @@
+const tableHTML = "http://172.16.3.117:5000";
+
 class Table {
   tableData = [];
 
@@ -7,7 +9,7 @@ class Table {
 
   static async getTables (classroom) {
     this.tableData;
-    await fetch(`http://192.168.184.1:5000/api/Table/${classroom}`)
+    await fetch(`${tableHTML}/api/Table/${classroom}`)
     .then((res) => { return res.json() })
     .then((tables) => {
       this.tableData = tables;   
@@ -26,7 +28,7 @@ class Table {
     };
 
     for (let i = 1; i <= numberOfNewTables; i++) {
-      await fetch(`http://192.168.184.1:5000/api/Table`, {
+      await fetch(`${tableHTML}/api/Table`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(newTable)
@@ -42,7 +44,7 @@ class Table {
   static async deleteNewTables(idArray, added){
     idArray.forEach(t => {
       console.log(t.id)
-      fetch(`http://192.168.184.1:5000/api/Table/${t.id}`, {
+      fetch(`${tableHTML}/api/Table/${t.id}`, {
         method: 'DELETE',
         headers: { 'Content-Type': 'application/json' },
       })
@@ -62,7 +64,7 @@ class Table {
       studentID: 0,
       position: "1"
     };
-    await fetch(`http://192.168.184.1:5000/api/Reset/${classroom}`, {
+    await fetch(`${tableHTML}/api/Reset/${classroom}`, {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(tableBody)
@@ -77,7 +79,7 @@ class Table {
     const positionBody = {
       position: position,
     };
-    fetch(`http://192.168.184.1:5000/api/Table/${id}`, {
+    fetch(`${tableHTML}/api/Table/${id}`, {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(positionBody)

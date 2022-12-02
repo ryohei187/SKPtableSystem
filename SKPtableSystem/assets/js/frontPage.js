@@ -1,8 +1,10 @@
+const frontpageHTML = "http://172.16.3.117:5000";
+
 async function getClassroomData(){  
   let zone;
   let teacher;
   let subject;
-  await fetch(`http://192.168.184.1:5000/api/Classroom`)
+  await fetch(`${frontpageHTML}/api/Classroom`)
   .then((res) => { return res.json() })
   .then((classroom) => {
     var elements = classroom.map(c => {
@@ -47,7 +49,7 @@ getClassroomData();
 
 
 async function getTableCount(classrooms, freeID, occupiedID) {
-  await fetch(`http://192.168.184.1:5000/api/Table/${classrooms}`)
+  await fetch(`${frontpageHTML}/api/Table/${classrooms}`)
   .then((res) => { return res.json() })
   .then((tables) => {
     
